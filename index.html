@@ -17,54 +17,85 @@
                 var mn = dt.getMinutes();
                 var sc = dt.getSeconds();
                 
+                //The first digit of seconds
+                
+                if (parseInt(sc/10) == 0) {
+                    $("p#s1").html("###&nbsp;</br>#&nbsp;#&nbsp;</br>#&nbsp;#&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;");
+                }
+                
+                else if (parseInt(sc/10) == 1) {
+                    $("p#s1").html("&nbsp;#&nbsp;&nbsp;</br>##&nbsp;&nbsp;</br>&nbsp;#&nbsp;&nbsp;</br>&nbsp;#&nbsp;&nbsp;</br>###&nbsp;");
+                }
+                
+                else if (parseInt(sc/10) == 2) {
+                    $("p#s1").html("###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;</br>#&nbsp;&nbsp;&nbsp;</br>###&nbsp;");
+                }
+                
+                else if (parseInt(sc/10) == 3) {
+                    $("p#s1").html("###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;##&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;");
+                }
+                
+                else if (parseInt(sc/10) == 4) {
+                    $("p#s1").html("#&nbsp;#&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;&nbsp;#&nbsp;");
+                }
+                
+                else if (parseInt(sc/10) == 5) {
+                    $("p#s1").html("###&nbsp;</br>#&nbsp;&nbsp;&nbsp;</br>###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;");
+                }
+                
+                //The second digit of seconds
+                    
                 if (sc % 10 == 0) {
-                    $("p#h1").html("###&nbsp;</br>#&nbsp;#&nbsp;</br>#&nbsp;#&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;");
+                    $("p#s2").html("###&nbsp;</br>#&nbsp;#&nbsp;</br>#&nbsp;#&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;");
                 }
                 
                 else if (sc % 10 == 1) {
-                    $("p#h1").html("&nbsp;#&nbsp;&nbsp;</br>##&nbsp;&nbsp;</br>&nbsp;#&nbsp;&nbsp;</br>&nbsp;#&nbsp;&nbsp;</br>###&nbsp;");
+                    $("p#s2").html("&nbsp;#&nbsp;&nbsp;</br>##&nbsp;&nbsp;</br>&nbsp;#&nbsp;&nbsp;</br>&nbsp;#&nbsp;&nbsp;</br>###&nbsp;");
                 }
                 
                 else if (sc % 10 == 2) {
-                    $("p#h1").html("###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;</br>#&nbsp;&nbsp;&nbsp;</br>###&nbsp;");
+                    $("p#s2").html("###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;</br>#&nbsp;&nbsp;&nbsp;</br>###&nbsp;");
                 }
                 
                 else if (sc % 10 == 3) {
-                    $("p#h1").html("###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;##&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;");
+                    $("p#s2").html("###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;##&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;");
                 }
                 
                 else if (sc % 10 == 4) {
-                    $("p#h1").html("#&nbsp;#&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;&nbsp;#&nbsp;");
+                    $("p#s2").html("#&nbsp;#&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;&nbsp;#&nbsp;");
                 }
                 
                 else if (sc % 10 == 5) {
-                    $("p#h1").html("###&nbsp;</br>#&nbsp;&nbsp;&nbsp;</br>###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;");
+                    $("p#s2").html("###&nbsp;</br>#&nbsp;&nbsp;&nbsp;</br>###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;");
                 }
                 
                 else if (sc % 10 == 6) {
-                    $("p#h1").html("###&nbsp;</br>#&nbsp;&nbsp;&nbsp;</br>###&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;");
+                    $("p#s2").html("###&nbsp;</br>#&nbsp;&nbsp;&nbsp;</br>###&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;");
                 }
                 
                 else if (sc % 10 == 7) {
-                    $("p#h1").html("###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;&nbsp;#&nbsp;");
+                    $("p#s2").html("###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>&nbsp;&nbsp;#&nbsp;");
                 }
                 
                 else if (sc % 10 == 8) {
-                    $("p#h1").html("###&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;");
+                    $("p#s2").html("###&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;");
                 }
                 
                 else if (sc % 10 == 9) {
-                    $("p#h1").html("###&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;");
+                    $("p#s2").html("###&nbsp;</br>#&nbsp;#&nbsp;</br>###&nbsp;</br>&nbsp;&nbsp;#&nbsp;</br>###&nbsp;");
                 }
-                
-                //if ((hr == 9) || (hr == 21)) {
-                //    $("p#h1").html("###</br># #</br>###</br>&nbsp;&nbsp;#</br>###");
-                                                         
+                                                                        
             },1000);            
             
         </script>
         
-        <p id="h1"></p>
+        <div style="float: left;">
+            <p id="s1"></p>
+        </div>
+
+        <div style="float: left;">
+            <p id="s2"></p>
+        </div>
     </body>
 </html>
 
