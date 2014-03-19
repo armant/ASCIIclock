@@ -1,4 +1,8 @@
-
 html {
-    font-family: Courier;
+    font-family: Courier, 'Source Code Pro';
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
 }
